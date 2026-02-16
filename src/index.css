@@ -1,0 +1,441 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&display=swap');
+
+@import "tailwindcss";
+
+/* ============================================
+   ESTILOS GLOBALES - PORTAFOLIO CABORCA
+   Based on MockUp V1 Styles
+   ============================================ */
+
+/* Variables CSS */
+:root {
+    --caborca-cafe: #332B1E;
+    --caborca-arena: #D2B48C;
+    --caborca-beige-suave: #E8DCC4;
+    --caborca-negro: #262F29;
+    --caborca-bronce: #B8935F;
+    --caborca-beige-fuerte: #9B8674;
+    --caborca-verde: #34433B;
+    --caborca-beige-muy-suave: #dfceaa;
+}
+
+html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--caborca-cafe);
+    padding-top: 0;
+    /* Reset padding to match mockup behavior with negative margin */
+}
+
+/* ============================================
+   COLORES Y UTILIDADES (colores_caborca.css)
+   ============================================ */
+
+/* Colores de texto */
+.text-caborca-cafe {
+    color: var(--caborca-cafe) !important;
+}
+
+.text-caborca-arena {
+    color: var(--caborca-arena) !important;
+}
+
+.text-caborca-beige-suave {
+    color: var(--caborca-beige-suave) !important;
+}
+
+.text-caborca-beige-fuerte {
+    color: var(--caborca-beige-fuerte) !important;
+}
+
+.text-caborca-negro {
+    color: var(--caborca-negro) !important;
+}
+
+.text-caborca-bronce {
+    color: var(--caborca-bronce) !important;
+}
+
+.text-caborca-verde {
+    color: var(--caborca-verde) !important;
+}
+
+/* Colores de fondo */
+.bg-caborca-cafe {
+    background-color: var(--caborca-cafe) !important;
+}
+
+.bg-caborca-arena {
+    background-color: var(--caborca-arena) !important;
+}
+
+.bg-caborca-beige-suave {
+    background-color: var(--caborca-beige-suave) !important;
+}
+
+.bg-caborca-beige-fuerte {
+    background-color: var(--caborca-beige-fuerte) !important;
+}
+
+.bg-caborca-negro {
+    background-color: var(--caborca-negro) !important;
+}
+
+.bg-caborca-bronce {
+    background-color: var(--caborca-bronce) !important;
+}
+
+.bg-caborca-verde {
+    background-color: var(--caborca-verde) !important;
+}
+
+/* Bordes */
+.border-caborca-cafe {
+    border-color: var(--caborca-cafe) !important;
+}
+
+.border-caborca-arena {
+    border-color: var(--caborca-arena) !important;
+}
+
+.border-caborca-negro {
+    border-color: var(--caborca-negro) !important;
+}
+
+.border-caborca-bronce {
+    border-color: var(--caborca-bronce) !important;
+}
+
+.border-caborca-verde {
+    border-color: var(--caborca-verde) !important;
+}
+
+/* Hovers */
+.hover-text-caborca-cafe:hover {
+    color: var(--caborca-cafe) !important;
+}
+
+.hover-text-caborca-verde:hover {
+    color: var(--caborca-verde) !important;
+}
+
+.hover-text-caborca-arena:hover {
+    color: var(--caborca-arena) !important;
+}
+
+.hover-bg-caborca-arena:hover {
+    background-color: var(--caborca-arena) !important;
+}
+
+.hover-bg-caborca-cafe:hover {
+    background-color: var(--caborca-cafe) !important;
+}
+
+.hover-bg-caborca-bronce:hover {
+    background-color: var(--caborca-bronce) !important;
+}
+
+/* Botón primario reutilizable */
+.btn-primario {
+    background-color: var(--caborca-cafe);
+    color: #fff;
+}
+
+.btn-primario:hover {
+    background-color: var(--caborca-bronce);
+}
+
+/* ============================================
+   HEADER & NAVEGACIÓN (navegacion.css)
+   ============================================ */
+header {
+    background-color: rgba(51, 43, 30, 0.7) !important;
+    transition: background-color 0.4s ease !important;
+}
+
+header:hover {
+    background-color: rgba(51, 43, 30, 0.95) !important;
+}
+
+header:hover nav a,
+header:hover nav button {
+    color: #ffffff !important;
+}
+
+/* Logo Styles */
+header img {
+    opacity: 1;
+}
+
+/* Navegación */
+nav {
+    transition: all 0.3s ease;
+}
+
+nav a,
+nav button {
+    color: #fff !important;
+    transition: color 0.3s ease;
+}
+
+nav a:hover,
+nav button:hover {
+    color: #EC9B48 !important;
+}
+
+/* Dropdown menu */
+nav .group>div {
+    background-color: rgba(51, 43, 30, 0.95) !important;
+}
+
+nav .group>div a {
+    color: #ECE7DF !important;
+}
+
+nav .group>div a:hover {
+    color: #ECE7DF !important;
+}
+
+/* Mobile Menu Styles */
+@media (max-width: 1023px) {
+    #mobile-menu {
+        animation: slideDown 0.3s ease-out;
+    }
+
+    @keyframes slideDown {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+
+/* Responsive text sizes */
+@media (max-width: 640px) {
+    header img {
+        height: 2rem;
+    }
+}
+
+@media (min-width: 641px) and (max-width: 1023px) {
+    header img {
+        height: 2.5rem;
+    }
+}
+
+/* Botones de sección */
+.btn-section {
+    transition: color 0.3s ease;
+}
+
+.btn-section:hover {
+    color: var(--caborca-cafe) !important;
+}
+
+/* Links generales */
+a {
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--caborca-cafe);
+}
+
+
+/* ============================================
+   CAROUSEL (carousel.css)
+   ============================================ */
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    height: 120vh;
+    margin: 0;
+    margin-top: 0;
+    padding: 0;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.carousel-slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    background-size: cover;
+    background-position: center;
+}
+
+.carousel-slide.active {
+    opacity: 1;
+}
+
+/* Parallax Effect */
+.parallax-layer {
+    position: absolute;
+    width: 100%;
+    height: 120%;
+    top: -10%;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.1s ease-out;
+}
+
+.carousel-content {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+    color: white;
+}
+
+.carousel-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 5;
+}
+
+.carousel-title {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    font-family: 'Playfair Display', serif;
+}
+
+.carousel-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+.carousel-btn {
+    padding: 1rem 2.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    background-color: var(--caborca-beige-fuerte);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+.carousel-btn:hover {
+    background-color: var(--caborca-bronce);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Navigation Dots */
+.carousel-dots {
+    position: absolute;
+    bottom: 25vh;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 15px;
+    z-index: 30;
+}
+
+.carousel-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.carousel-dot.active {
+    background-color: #D2B48C;
+    transform: scale(1.3);
+}
+
+.carousel-dot:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Distributor Carousel Styles - Independiente del carousel principal */
+.distributor-carousel {
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+.distributor-carousel::-webkit-scrollbar {
+    display: none;
+}
+
+/* Responsive for Carousel */
+@media (max-width: 768px) {
+    .carousel-title {
+        font-size: 2.5rem;
+    }
+
+    .carousel-subtitle {
+        font-size: 1rem;
+    }
+
+    .carousel-btn {
+        padding: 0.75rem 2rem;
+        font-size: 0.875rem;
+    }
+}
+
+/* ============================================
+   ANIMACIONES CUSTOM
+   ============================================ */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fadeIn {
+    animation: fadeIn 0.6s ease-out;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.animate-scroll {
+    animation: scroll 20s linear infinite;
+}
+
+.animate-scroll:hover {
+    animation-play-state: paused;
+}
