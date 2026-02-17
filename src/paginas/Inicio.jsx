@@ -5,7 +5,6 @@ import Carrusel from '../componentes/Carrusel';
 import PieDePagina from '../componentes/PieDePagina';
 
 const Inicio = () => {
-    // Editor removed: contenido estático del portafolio
     const [activeFilter, setActiveFilter] = useState('todos');
 
     const distribuidoresLogos = [
@@ -23,7 +22,6 @@ const Inicio = () => {
 
     return (
         <div className="min-h-screen">
-            {/* Admin controls removed for portfolio-only build */}
             {/* Carrusel con header integrado */}
             <div className="relative h-screen">
                 <Encabezado />
