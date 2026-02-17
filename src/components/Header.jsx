@@ -44,6 +44,7 @@ const Header = () => {
             <Link to="/distribuidores" className="text-white">DISTRIBUIDORES</Link>
             <Link to="/contacto" className="text-white">CONTACTO</Link>
             <Link to="/mantenimiento" className="text-white">EN CONSTRUCCIÓN</Link>
+            <Link to="/notfound" className="text-white">404</Link>
           </nav>
 
           {/* Mobile Menu Button */}
