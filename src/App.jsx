@@ -11,6 +11,7 @@ import Contacto from './paginas/Contacto';
 import DetalleProducto from './paginas/DetalleProducto';
 import NotFound from './paginas/NotFound';
 import EnConstruccion from './paginas/EnConstruccion';
+import NotFound from './paginas/NotFound';
 
 function App() {
   return (
@@ -37,7 +38,7 @@ function App() {
 
         {/* Páginas de estado */}
         <Route path="/mantenimiento" element={<EnConstruccion />} />
-        <Route path="*" element={<NotFound />} />
+        <Route path="/NotFound" element={<NotFound />} />
       </Routes>
     </Router>
   );
