@@ -11,7 +11,6 @@ import Contacto from './paginas/Contacto';
 import DetalleProducto from './paginas/DetalleProducto';
 import NotFound from './paginas/NotFound';
 import EnConstruccion from './paginas/EnConstruccion';
-import NotFound from './paginas/NotFound';
 
 function App() {
   return (
